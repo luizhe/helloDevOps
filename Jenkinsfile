@@ -1,18 +1,13 @@
 pipeline {
-    agent none
+    agent any
 
     stages {
-        stage('Build') {
-            agent any
-
+        stage('Diagnóstico') {
             steps {
-                bat 'echo iniciando build...'
-                bat 'python -m py_compile hello.py'
-
-                stash(
-                    name: 'compiled-results',
-                    includes: '**/*.pyc'
-                )
+                bat 'whoami'
+                bat 'where python'
+                bat 'python --version'
+                bat 'echo %PATH%'
             }
         }
     }
