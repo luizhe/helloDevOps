@@ -7,7 +7,7 @@ pipeline {
 
             steps {
                 bat 'echo iniciando build...'
-                bat 'python3 -m py_compile hello.py'
+                bat 'python -m py_compile hello.py'
 
                 stash(
                     name: 'compiled-results',
