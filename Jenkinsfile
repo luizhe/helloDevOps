@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'echo Iniciando build...'
+                bat 'echo Iniciando build'
                 bat 'python --version'
                 bat 'python -m py_compile hello.py'
 
